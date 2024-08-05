@@ -32,7 +32,7 @@ export default function Navbar() {
               </li>
               <li>
                 <Link
-                  href={"/"}
+                  href={"/project"}
                   className="text-gray-400 flex items-center hover:text-white"
                 >
                   <FaRegLightbulb size={24} className="mr-2" />

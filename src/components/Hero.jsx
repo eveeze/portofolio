@@ -37,6 +37,7 @@ export default function Hero() {
                 <Link
                   href={"https://uty.ac.id/"}
                   className="text-white group transition-all duration-300 ease-in-out"
+                  target="_blank"
                 >
                   <span className="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                     Universitas Teknologi Yogyakarta
@@ -48,65 +49,78 @@ export default function Hero() {
           <div className="flex flex-wrap text-[#bbbbbb] mt-4 text-sm md:text-lg">
             <p className="mt-2">I have mastered</p>
             <div>
-              <SmallCard
-                imageUrl={"/image/html.png"}
-                title={"HTML"}
-                width={26}
-                height={26}
-                className={"ml-2 mt-1"}
-                imgclassName={"mt-1 ml-2"}
-              />
+              <Link href={"https://www.w3.org/"} target="_blank">
+                <SmallCard
+                  imageUrl={"/image/html.png"}
+                  title={"HTML"}
+                  width={26}
+                  height={26}
+                  className={"ml-2 mt-1"}
+                  imgclassName={"mt-1 ml-2"}
+                />
+              </Link>
             </div>
             <div>
-              <SmallCard
-                imageUrl={"/image/css.png"}
-                title={"CSS"}
-                width={26}
-                height={26}
-                className={"ml-2 mt-1"}
-                imgclassName={"mt-1 ml-2"}
-              />
+              <Link href={"https://www.w3.org/Style/CSS/"} target="_blank">
+                <SmallCard
+                  imageUrl={"/image/css.png"}
+                  title={"CSS"}
+                  width={26}
+                  height={26}
+                  className={"ml-2 mt-1"}
+                  imgclassName={"mt-1 ml-2"}
+                />
+              </Link>
             </div>
           </div>
           <div className="flex flex-wrap mt-4 text-[#bbbbbb] text-sm md:text-lg gap-2">
             <p className="mt-1">I have skills in </p>
             <div>
-              <SmallCard
-                imageUrl={"/image/Nextjs.png"}
-                title={"NextJS"}
-                width={40}
-                height={40}
-              />
+              <Link href={"https://nextjs.org/"} target="_blank">
+                <SmallCard
+                  imageUrl={"/image/Nextjs.png"}
+                  title={"NextJS"}
+                  width={40}
+                  height={40}
+                />
+              </Link>
             </div>
             <div>
-              <SmallCard
-                imageUrl={"/icons/logo_dark.svg"}
-                title={"React"}
-                width={25}
-                height={25}
-                imgclassName={"ml-2"}
-                className={"ml-2 p-1"}
-              />
+              <Link href={"https://react.dev/"} target="_blank">
+                <SmallCard
+                  imageUrl={"/icons/logo_dark.svg"}
+                  title={"React"}
+                  width={25}
+                  height={25}
+                  imgclassName={"ml-2"}
+                  className={"ml-2 p-1"}
+                />
+              </Link>
             </div>
             <div>
-              <SmallCard
-                imageUrl={"/image/js.png"}
-                title={"Javascript"}
-                width={28.5}
-                height={28.5}
-                className={"ml-1"}
-                imgclassName={"ml-1"}
-              />
+              <Link href={"https://www.javascript.com/"} target="_blank">
+                <SmallCard
+                  imageUrl={"/image/js.png"}
+                  title={"Javascript"}
+                  width={28.5}
+                  height={28.5}
+                  className={"ml-1"}
+                  imgclassName={"ml-1"}
+                />
+              </Link>
             </div>
             <div>
-              <SmallCard
-                imageUrl={"/icons/tailwindcss.svg"}
-                title={"Tailwind CSS"}
-                width={40.5}
-                height={40.5}
-                className={""}
-                imgclassName={"p-1"}
-              />
+              <Link href={"https://tailwindcss.com/"} target="_blank">
+                {" "}
+                <SmallCard
+                  imageUrl={"/icons/tailwindcss.svg"}
+                  title={"Tailwind CSS"}
+                  width={40.5}
+                  height={40.5}
+                  className={""}
+                  imgclassName={"p-1"}
+                />
+              </Link>
             </div>
           </div>
           <div className="text-[#bbbbbb] flex mt-8 text-sm md:text-lg">
