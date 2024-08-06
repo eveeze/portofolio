@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Video from "@/components/Video";
+
 export const metadata = {
   title: "titozaki",
   description: "Halaman Portofolio Tito Zaki Saputro",

@@ -1,4 +1,4 @@
-// pages/index.js
+// (main)/page.jsx
 import Head from "next/head";
 import dynamic from "next/dynamic";
 import Hero from "@/components/Hero";

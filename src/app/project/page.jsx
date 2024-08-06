@@ -1,7 +1,9 @@
 export default function Project() {
   return (
     <>
-      <h1 className="text-9xl text-white">hello world</h1>
+      <div className="min-h-dvh w-full mx-auto max-w-screen-md">
+        <h1 className="text-9xl text-white mt-24">hello world</h1>
+      </div>
     </>
   );
 }

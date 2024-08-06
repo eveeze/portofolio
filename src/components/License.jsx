@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function License() {
   return (
     <div className=" mt-16">
-      <p className="text-[#bbbbbb] text-lg">
+      <p className="text-[#bbbbbb] text-sm md:text-lg">
         <Link
           href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
           target="_blank"
@@ -18,7 +18,7 @@ export default function License() {
           property="cc:attributionName"
           href="https://www.linkedin.com/in/tito-zaki-saputro-6a854a229/"
         >
-          &copy;Tito Zaki Saputro{" "}
+          © Tito Zaki Saputro{" "}
         </Link>
       </p>
     </div>

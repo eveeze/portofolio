@@ -9,7 +9,7 @@ export default function SmallCard({
   imgclassName,
 }) {
   return (
-    <div className="bg-[#161616]  hover:bg-[#1f1f1f] hover:font-bold hover:text-[#aaaaaa] text-[#888888] rounded-lg shadow-lg flex items-center pr-4  ml-4">
+    <div className="bg-[#161616]   hover:bg-[#1f1f1f] hover:font-bold hover:text-[#aaaaaa] text-[#888888] rounded-lg shadow-lg flex items-center pr-4  ml-4">
       <div className="flex-shrink-0">
         <Image
           src={imageUrl}
