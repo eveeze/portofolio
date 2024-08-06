@@ -3,22 +3,23 @@ import SmallCard from "./SmallCard";
 import Link from "next/link";
 import SocialMediaCard from "./Sosmed";
 import License from "./License";
+
 export default function Hero() {
   return (
     <>
-      <div className=" max-w-screen-md mx-auto mt-32 p-8 space-y-4 ">
+      <div className="max-w-screen-md mx-auto mt-32 p-8 space-y-4">
         <div className="space-y-8">
-          <h1 className="text-gray-200 text-3xl font-bold ">
+          <h1 className="text-gray-200 text-3xl font-bold">
             Tito Zaki Saputro
           </h1>
           <p className="text-[#bbbbbb] text-sm md:text-lg font-normal">
-            Hi, I'm Tito Zaki Saputro, a college student passionate about web
-            development.
+            Hi, I&apos;m Tito Zaki Saputro, a college student passionate about
+            web development.
           </p>
         </div>
         <div>
           <div className="flex text-[#bbbbbb] text-sm md:text-lg">
-            <p className=" mt-1">Founder of</p>
+            <p className="mt-1">Founder of</p>
             <div>
               <SmallCard
                 imageUrl={"/image/verdex.png"}
@@ -42,7 +43,7 @@ export default function Hero() {
                   <span className="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
                     Universitas Teknologi Yogyakarta
                   </span>
-                </Link>{" "}
+                </Link>
               </p>
             </div>
           </div>
@@ -128,7 +129,7 @@ export default function Hero() {
               Dreaming up ideas and making them come true is where my passion
               lies. You can find my{" "}
               <Link
-                className="text-white group transition-all duration-300 ease-in-out "
+                className="text-white group transition-all duration-300 ease-in-out"
                 href={"/project"}
               >
                 <span className="bg-left-bottom bg-gradient-to-r from-white to-white bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
@@ -150,19 +151,19 @@ export default function Hero() {
           <div className="text-[#bbbbbb] flex mt-8 text-sm md:text-lg">
             <p>
               Outside of programming, I enjoy playing games. Playing games helps
-              me develop strategic thinking and problem-solving
-              skills.Currently, I live in Boyolali, Central Java. If you are
-              around this area, feel free to reach out. Maybe we can grab a
-              coffee or work together on an exciting project.
+              me develop strategic thinking and problem-solving skills.
+              Currently, I live in Boyolali, Central Java. If you are around
+              this area, feel free to reach out. Maybe we can grab a coffee or
+              work together on an exciting project.
             </p>
           </div>
-          <hr className="w-24 h-[2px] mx-auto my-4 bg-[#292929] border-0 rounded md:my-10 " />
+          <hr className="w-24 h-[2px] mx-auto my-4 bg-[#292929] border-0 rounded md:my-10" />
           <div className="flex mt-8 text-sm md:text-lg">
             <SocialMediaCard />
           </div>
           <div className="mt-10">
             <p className="text-[#bbbbbb] text-sm md:text-lg">
-              If you enjoy my work and find it interesting , consider supporting
+              If you enjoy my work and find it interesting, consider supporting
               me by visiting{" "}
               <Link
                 href={"https://verdex.id"}
