@@ -49,19 +49,19 @@ export default function Hero() {
           </div>
           <div className="flex flex-wrap text-[#bbbbbb] mt-4 text-sm md:text-lg">
             <p className="mt-2">I have mastered</p>
-            <div>
+            <div className="w-28">
               <Link href={"https://www.w3.org/"} target="_blank">
                 <SmallCard
                   imageUrl={"/image/html.png"}
                   title={"HTML"}
-                  width={26}
-                  height={26}
+                  width={24}
+                  height={24}
                   className={"ml-2 mt-1"}
                   imgclassName={"mt-1 ml-2"}
                 />
               </Link>
             </div>
-            <div>
+            <div className="w-26 ">
               <Link href={"https://www.w3.org/Style/CSS/"} target="_blank">
                 <SmallCard
                   imageUrl={"/image/css.png"}

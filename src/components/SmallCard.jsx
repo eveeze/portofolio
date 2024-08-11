@@ -20,7 +20,7 @@ export default function SmallCard({
         />
       </div>
       <div>
-        <h4 className={`text-[12px] md:text-sm font-semibold  ${className}`}>
+        <h4 className={`text-xs md:text-sm font-semibold  ${className}`}>
           {title}
         </h4>
       </div>
