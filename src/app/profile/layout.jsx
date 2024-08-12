@@ -1,9 +1,11 @@
+// app/profile/layout.jsx
+
 import Navbar from "@/components/Navbar";
 import Video from "@/components/Video";
 
 export const metadata = {
   title: "titozaki",
-  description: "Halaman Contact Tito Zaki Saputro",
+  description: "Halaman Profile Tito Zaki Saputro",
 };
 
 export default function RootLayout({ children }) {

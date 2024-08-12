@@ -1,4 +1,4 @@
-import Image from "next/image";
+"use client";
 import SmallCard from "./SmallCard";
 import Link from "next/link";
 import SocialMediaCard from "./Sosmed";
