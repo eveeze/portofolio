@@ -5,7 +5,9 @@ import ProfilePage from "@/components/ProfilePage";
 export default function Profile() {
   return (
     <>
-      <ProfilePage />
+      <div className="text-gray-200">
+        <ProfilePage />
+      </div>
     </>
   );
 }

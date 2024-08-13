@@ -27,12 +27,9 @@ export default function RootLayout({ children }) {
           content={`https://titozaki.vercel.app/images/pp.png`}
         />
       </Head>
-      <body>
+      <body className="">
         <Navbar />
-        <Video />
-
         {children}
-        <Video className={"top-full h-max md:h-[450px]"} />
       </body>
     </html>
   );

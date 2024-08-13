@@ -1,3 +1,5 @@
+// components/Hero.jsx
+
 "use client";
 import SmallCard from "./SmallCard";
 import Link from "next/link";
@@ -5,6 +7,51 @@ import SocialMediaCard from "./Sosmed";
 import License from "./License";
 
 export default function Hero() {
+  const skills = [
+    {
+      imageUrl: "/image/html.png",
+      title: "HTML",
+      link: "https://www.w3.org/",
+      width: 30,
+      height: 30,
+    },
+    {
+      imageUrl: "/image/css.png",
+      title: "CSS",
+      link: "https://www.w3.org/Style/CSS/",
+      width: 30,
+      height: 30,
+    },
+    {
+      imageUrl: "/image/Nextjs.png",
+      title: "NextJS",
+      link: "https://nextjs.org/",
+      width: 40,
+      height: 40,
+    },
+    {
+      imageUrl: "/icons/logo_dark.svg",
+      title: "React",
+      link: "https://react.dev/",
+      width: 33,
+      height: 33,
+    },
+    {
+      imageUrl: "/image/js.png",
+      title: "JavaScript",
+      link: "https://www.javascript.com/",
+      width: 30,
+      height: 30,
+    },
+    {
+      imageUrl: "/icons/tailwindcss.svg",
+      title: "Tailwind CSS",
+      link: "https://tailwindcss.com/",
+      width: 41,
+      height: 41,
+    },
+  ];
+
   return (
     <>
       <div className="max-w-screen-md mx-auto mt-32 p-8 space-y-4">
@@ -20,16 +67,18 @@ export default function Hero() {
         <div>
           <div className="flex text-[#bbbbbb] text-sm md:text-lg">
             <p className="mt-1">Founder of</p>
-            <div>
-              <SmallCard
-                imageUrl={"/image/verdex.png"}
-                title={"Verdex"}
-                width={40}
-                height={40}
-                className={"p-1"}
-              />
+            <div className="ml-4 mt-1">
+              <Link href={"https://verdex.id"} className="">
+                <SmallCard
+                  imageUrl={"/image/verdex.png"}
+                  title={"Verdex"}
+                  width={40}
+                  height={40}
+                  className={""}
+                  imgclassName={"p-0.5"}
+                />
+              </Link>
             </div>
-            <p></p>
           </div>
           <div>
             <div className="flex flex-wrap mt-4 text-[#bbbbbb] text-sm md:text-lg">
@@ -47,81 +96,23 @@ export default function Hero() {
               </p>
             </div>
           </div>
-          <div className="flex flex-wrap text-[#bbbbbb] mt-4 text-sm md:text-lg">
-            <p className="mt-2">I have mastered</p>
-            <div className="w-28">
-              <Link href={"https://www.w3.org/"} target="_blank">
-                <SmallCard
-                  imageUrl={"/image/html.png"}
-                  title={"HTML"}
-                  width={24}
-                  height={24}
-                  className={"ml-2 mt-1"}
-                  imgclassName={"mt-1 ml-2"}
-                />
-              </Link>
-            </div>
-            <div className="w-26 ">
-              <Link href={"https://www.w3.org/Style/CSS/"} target="_blank">
-                <SmallCard
-                  imageUrl={"/image/css.png"}
-                  title={"CSS"}
-                  width={26}
-                  height={26}
-                  className={"ml-2 mt-1"}
-                  imgclassName={"mt-1 ml-2"}
-                />
-              </Link>
-            </div>
-          </div>
-          <div className="flex flex-wrap mt-4 text-[#bbbbbb] text-sm md:text-lg gap-2">
+          <div className="mt-4 text-[#bbbbbb] text-sm md:text-lg">
             <p className="mt-1">I have skills in </p>
-            <div>
-              <Link href={"https://nextjs.org/"} target="_blank">
-                <SmallCard
-                  imageUrl={"/image/Nextjs.png"}
-                  title={"NextJS"}
-                  width={40}
-                  height={40}
-                />
-              </Link>
-            </div>
-            <div>
-              <Link href={"https://react.dev/"} target="_blank">
-                <SmallCard
-                  imageUrl={"/icons/logo_dark.svg"}
-                  title={"React"}
-                  width={25}
-                  height={25}
-                  imgclassName={"ml-2"}
-                  className={"ml-2 p-1"}
-                />
-              </Link>
-            </div>
-            <div>
-              <Link href={"https://www.javascript.com/"} target="_blank">
-                <SmallCard
-                  imageUrl={"/image/js.png"}
-                  title={"Javascript"}
-                  width={28.5}
-                  height={28.5}
-                  className={"ml-1"}
-                  imgclassName={"ml-1"}
-                />
-              </Link>
-            </div>
-            <div>
-              <Link href={"https://tailwindcss.com/"} target="_blank">
-                {" "}
-                <SmallCard
-                  imageUrl={"/icons/tailwindcss.svg"}
-                  title={"Tailwind CSS"}
-                  width={40.5}
-                  height={40.5}
-                  className={""}
-                  imgclassName={"p-1"}
-                />
-              </Link>
+            <div className="flex flex-wrap gap-2  items-center justify-left ">
+              {skills.map((skill, index) => (
+                <div key={index} className=" mt-1">
+                  <Link href={skill.link} target="_blank">
+                    <SmallCard
+                      imageUrl={skill.imageUrl}
+                      title={skill.title}
+                      width={skill.width}
+                      height={skill.height}
+                      className={"flex items-center justify-center"}
+                      imgclassName={"p-0.5"}
+                    />
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
           <div className="text-[#bbbbbb] flex mt-8 text-sm md:text-lg">
@@ -157,7 +148,7 @@ export default function Hero() {
               work together on an exciting project.
             </p>
           </div>
-          <hr className="w-24 h-[2px] mx-auto my-4 bg-[#292929] border-0 rounded md:my-10" />
+          <hr className="w-32 h-[2px] mx-auto my-4 bg-[#686767] border-0 rounded md:my-10" />
           <div className="flex mt-8 text-sm md:text-lg">
             <SocialMediaCard />
           </div>

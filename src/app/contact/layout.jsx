@@ -11,9 +11,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`text-gray-200`}>
       <body>
         <Navbar />
-        <Video />
         {children}
-        <Video className={"top-full h-[450px]"} />
       </body>
     </html>
   );
