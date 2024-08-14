@@ -1,77 +1,91 @@
-// components/ContactForm
+"use client";
+import Button from "./Button";
+import Input from "./Input";
+import { useState } from "react";
+
 export default function ContactForm() {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [status, setStatus] = useState(null);
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus("success");
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
+    } catch (error) {
+      setStatus("error");
+    }
+  };
+
   return (
-    <form className="space-y-6 mt-10">
-      <div className="space-y-1">
-        <label
-          htmlFor="name"
-          className="block text-gray-200 text-sm font-semibold"
-        >
-          Name
-        </label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
-          placeholder="Your Name"
-        />
-      </div>
-
-      <div className="space-y-1">
-        <label
-          htmlFor="email"
-          className="block text-gray-200 text-sm font-semibold"
-        >
-          Email Address
-        </label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
-          placeholder="Your Email Address"
-        />
-      </div>
-
-      <div className="space-y-1">
-        <label
-          htmlFor="subject"
-          className="block text-gray-200 text-sm font-semibold"
-        >
-          Subject
-        </label>
-        <input
-          type="text"
-          id="subject"
-          name="subject"
-          className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
-          placeholder="Subject"
-        />
-      </div>
-
-      <div className="space-y-1">
-        <label
-          htmlFor="message"
-          className="block text-gray-200 text-sm font-semibold"
-        >
-          Message
-        </label>
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
-          placeholder="Your Message"
-        ></textarea>
-      </div>
-
-      <button
-        type="submit"
-        className="w-full py-3 mt-4 bg-purple-600 text-white font-semibold rounded-xl shadow-md hover:bg-purple-500 focus:outline-none focus:ring-2 focus:ring-gray-700"
-      >
-        Send Message
-      </button>
+    <form className="space-y-6 mt-10" onSubmit={handleSubmit}>
+      <Input
+        label="Nama"
+        type="text"
+        name="name"
+        value={formData.name}
+        onChange={handleChange}
+        placeholder="Nama Anda"
+      />
+      <Input
+        label="Alamat Email"
+        type="email"
+        name="email"
+        value={formData.email}
+        onChange={handleChange}
+        placeholder="Alamat Email Anda"
+      />
+      <Input
+        label="Subjek"
+        type="text"
+        name="subject"
+        value={formData.subject}
+        onChange={handleChange}
+        placeholder="Subjek"
+      />
+      <Input
+        label="Pesan"
+        type="textarea"
+        name="message"
+        value={formData.message}
+        onChange={handleChange}
+        placeholder="Pesan Anda"
+        rows="6"
+      />
+      <Button>Kirim</Button>
+      {status === "success" && (
+        <p className="text-green-500">Email berhasil dikirim!</p>
+      )}
+      {status === "error" && (
+        <p className="text-red-500">Gagal mengirim email. Coba lagi nanti.</p>
+      )}
     </form>
   );
 }

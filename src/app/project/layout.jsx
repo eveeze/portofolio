@@ -9,11 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`text-gray-200`}>
-      <body className="bg-black ">
+      <body>
         <Navbar />
-        <Video />
         {children}
-        <Video className={"top-full h-[450px]"} />
       </body>
     </html>
   );
