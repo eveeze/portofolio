@@ -6,6 +6,8 @@ export default function Input({
   name,
   placeholder,
   rows,
+  error,
+  required = false,
   ...rest
 }) {
   const isTextarea = type === "textarea";
@@ -22,6 +24,7 @@ export default function Input({
           rows={rows || 4}
           className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
           placeholder={placeholder}
+          required={required}
           {...rest}
         ></textarea>
       ) : (
@@ -31,9 +34,11 @@ export default function Input({
           name={name}
           className="w-full p-3 bg-[#1C1E22] text-[#bababa] placeholder-[#bababa] border border-[#1A1B1E] rounded-xl shadow-formNeumorphism focus:outline-none focus:ring-2 focus:ring-gray-700"
           placeholder={placeholder}
+          required={required}
           {...rest}
         />
       )}
+      {error && <p className="text-red-500 text-sm">{error}</p>}
     </div>
   );
 }

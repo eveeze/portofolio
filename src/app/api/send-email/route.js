@@ -1,3 +1,5 @@
+// api/send-email/route.js
+
 import nodemailer from "nodemailer";
 
 let requestCount = 0;
