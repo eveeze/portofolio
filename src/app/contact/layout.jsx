@@ -1,5 +1,4 @@
 import Navbar from "@/components/Navbar";
-import Video from "@/components/Video";
 
 export const metadata = {
   title: "titozaki",
@@ -8,7 +7,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`text-gray-200`}>
+    <html lang="en">
       <body>
         <Navbar />
         {children}

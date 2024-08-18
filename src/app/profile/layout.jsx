@@ -1,7 +1,6 @@
 // app/profile/layout.jsx
 
 import Navbar from "@/components/Navbar";
-import Video from "@/components/Video";
 
 export const metadata = {
   title: "titozaki",
@@ -11,9 +10,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className="">
+      <body>
         <Navbar />
-
         {children}
       </body>
     </html>

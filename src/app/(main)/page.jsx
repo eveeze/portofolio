@@ -1,6 +1,5 @@
 // (main)/page.jsx
 import Hero from "@/components/Hero";
-import Video from "@/components/Video";
 export default function Home() {
   return (
     <div className="min-h-dvh w-full mx-auto max-w-screen-md">

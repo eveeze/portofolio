@@ -1,6 +1,5 @@
 // (main)/layout.jsx
 import Navbar from "@/components/Navbar";
-import Video from "@/components/Video";
 import Head from "next/head";
 export const metadata = {
   title: "titozaki",
