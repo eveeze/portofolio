@@ -2,6 +2,7 @@
 import Badge from "./Badge";
 import CdButton from "./CdButton";
 import ContactForm from "./ContactForm";
+import License from "./License";
 
 export default function ContactPage() {
   return (
@@ -53,7 +54,12 @@ export default function ContactPage() {
           </h1>
           <ContactForm />
         </div>
-        <CdButton />
+        <div className="ml-2">
+          <CdButton />
+        </div>
+        <div className="ml-4">
+          <License />
+        </div>
       </div>
     </>
   );

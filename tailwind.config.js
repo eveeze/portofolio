@@ -60,6 +60,10 @@ module.exports = {
           inset 4px 4px 8px #0e0f12, /* Dark shadow */
           inset -4px -4px 8px #282c34 /* Light shadow */
         `,
+        shadowneumorph: `
+          9px 9px 16px #181a1d,
+          -9px -9px 16px #202227;
+        `,
       },
       borderRadius: {
         "3xl": "24px",
