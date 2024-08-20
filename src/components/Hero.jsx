@@ -98,7 +98,7 @@ export default function Hero() {
           </div>
           <div className="mt-4 text-[#bbbbbb] text-sm md:text-lg">
             <p className="mt-1">I have skills in </p>
-            <div className="flex flex-wrap gap-2  items-center justify-left ">
+            <div className="flex flex-wrap gap-2  items-center justify-left">
               {skills.map((skill, index) => (
                 <div key={index} className=" mt-1">
                   <Link href={skill.link} target="_blank">

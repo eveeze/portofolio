@@ -61,8 +61,16 @@ module.exports = {
           inset -4px -4px 8px #282c34 /* Light shadow */
         `,
         shadowneumorph: `
-          9px 9px 16px #181a1d,
-          -9px -9px 16px #202227;
+          9px 9px 16px #121417, /* Darker shadow */
+          -9px -9px 16px #1e2023; /* Lighter shadow */
+        `,
+        insetNeumorphism: `
+          inset 4px 4px 8px #0e0f12, /* Dark shadow */
+          inset -4px -4px 8px #2a2d32 /* Light shadow */
+        `,
+        hoverInset: `
+          inset 2px 2px 4px #0e0f12, /* Hover Dark shadow */
+          inset -2px -2px 4px #2a2d32 /* Hover Light shadow */
         `,
       },
       borderRadius: {

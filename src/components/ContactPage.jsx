@@ -49,7 +49,7 @@ export default function ContactPage() {
           </div>
         </div>
         <div className="p-4">
-          <h1 className="text-center text-3xl font-bold  mt-8">
+          <h1 className="text-center text-3xl font-bold  mt-24">
             Reach Out to Me
           </h1>
           <ContactForm />
