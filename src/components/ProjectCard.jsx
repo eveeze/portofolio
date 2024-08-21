@@ -14,7 +14,7 @@ export default function ProjectCard({ project }) {
       transition={{ type: "spring", stiffness: 200, damping: 10 }}
       className="bg-[#1C1E22] p-8 rounded-3xl shadow-[9px_9px_16px_#121417,-9px_-9px_16px_#1e2023,12px_12px_20px_rgba(0,0,0,0.3)] max-w-sm relative flex flex-col justify-between h-[250px]"
     >
-      <div>
+      <div className="">
         <div className="flex items-center mb-4">
           <div className="w-12 h-12 rounded-full bg-[#1C1E22] flex items-center justify-center shadow-[9px_9px_16px_#121417,-9px_-9px_16px_#1e2023]">
             <Image

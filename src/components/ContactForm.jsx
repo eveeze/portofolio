@@ -1,4 +1,7 @@
+// ContactForm.jsx
+
 "use client";
+import { motion } from "framer-motion";
 import Button from "./Button";
 import Input from "./Input";
 import { useState } from "react";
@@ -98,8 +101,27 @@ export default function ContactForm() {
     }
   };
 
+  // Framer Motion variants
+  const formVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+      },
+    },
+  };
+
   return (
-    <form className="space-y-6 mt-10" onSubmit={handleSubmit}>
+    <motion.form
+      className="space-y-6 mt-10"
+      onSubmit={handleSubmit}
+      variants={formVariants}
+      initial="hidden"
+      animate="visible"
+    >
       <Input
         label="Name"
         type="text"
@@ -145,6 +167,6 @@ export default function ContactForm() {
       {status === "error" && (
         <p className="text-red-500">Gagal mengirim email. Coba lagi nanti.</p>
       )}
-    </form>
+    </motion.form>
   );
 }
