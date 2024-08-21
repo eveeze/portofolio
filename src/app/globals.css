@@ -12,3 +12,19 @@ body,
     @apply bg-[#1C1E22];
 
 }
+
+.neumorphism-img {
+    background-color: #1C1E22;
+    border-radius: 50%;
+    box-shadow:
+        9px 9px 16px #121417,
+        /* Darker shadow */
+        -9px -9px 16px #1e2023,
+        /* Lighter shadow */
+        inset 2px 2px 4px rgba(0, 0, 0, 0.3),
+        /* Inset darker shadow */
+        inset -2px -2px 4px rgba(255, 255, 255, 0.2);
+    /* Inset lighter shadow */
+    padding: 15px;
+    display: inline-block;
+}

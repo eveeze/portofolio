@@ -122,6 +122,9 @@ export default function ContactForm() {
       initial="hidden"
       animate="visible"
     >
+      <h1 className="text-center text-2xl  font-bold  mt-12">
+        Reach Out to Me
+      </h1>
       <Input
         label="Name"
         type="text"
@@ -159,6 +162,7 @@ export default function ContactForm() {
         rows="6"
         error={isFormSubmitted && errors.message}
       />
+
       <Button>Submit</Button>
 
       {status === "success" && (
