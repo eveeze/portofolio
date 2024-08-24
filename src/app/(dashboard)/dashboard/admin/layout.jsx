@@ -1,3 +1,5 @@
+import DashboardNavbar from "@/components/DashboardNavbar";
+
 export const metadata = {
   title: "titozaki",
   description: "Halaman Contact Tito Zaki Saputro",
@@ -6,7 +8,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <DashboardNavbar />
+        {children}
+      </body>
     </html>
   );
 }

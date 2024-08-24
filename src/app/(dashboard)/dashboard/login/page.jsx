@@ -45,7 +45,7 @@ export default function Login() {
     });
 
     if (res.ok) {
-      router.push("/dashboard"); // Redirect to dashboard after successful verification
+      router.push("/dashboard/admin"); // Redirect to dashboard after successful verification
     } else {
       let data;
       try {
