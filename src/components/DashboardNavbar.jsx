@@ -12,12 +12,14 @@ const menuItems = [
 
 export default function DashboardNavbar() {
   return (
-    <Sidebar>
-      <SidebarBody>
-        {menuItems.map((item, index) => (
-          <SidebarLink key={index} link={item} />
-        ))}
-      </SidebarBody>
-    </Sidebar>
+    <div className="min-h-dvh h-full">
+      <Sidebar>
+        <SidebarBody>
+          {menuItems.map((item, index) => (
+            <SidebarLink key={index} link={item} />
+          ))}
+        </SidebarBody>
+      </Sidebar>
+    </div>
   );
 }

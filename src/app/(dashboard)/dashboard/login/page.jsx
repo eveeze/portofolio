@@ -70,6 +70,7 @@ export default function Login() {
         {step === 1 && (
           <form onSubmit={handleLogin} className="space-y-8">
             <Input
+              label={"Email"}
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -77,6 +78,7 @@ export default function Login() {
               required
             />
             <Input
+              label={"Password"}
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
