@@ -85,7 +85,7 @@ export default function Login() {
               placeholder="Password"
               required
             />
-            {error && <p className="error">{error}</p>}
+            {error && <p className="error text-gray-200">{error}</p>}
             <Button type="submit">Login</Button>
           </form>
         )}
