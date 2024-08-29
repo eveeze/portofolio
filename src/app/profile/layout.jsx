@@ -1,5 +1,6 @@
 // app/profile/layout.jsx
 
+import Chat from "@/components/Chat";
 import Navbar from "@/components/Navbar";
 
 export const metadata = {
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Navbar />
+        <Chat />
         {children}
       </body>
     </html>

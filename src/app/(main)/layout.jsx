@@ -1,4 +1,5 @@
 // (main)/layout.jsx
+import Chat from "@/components/Chat";
 import Navbar from "@/components/Navbar";
 export const metadata = {
   title: "titozaki",
@@ -11,6 +12,7 @@ export default function RootLayout({ children }) {
       <body className="">
         <Navbar />
         {children}
+        <Chat />
       </body>
     </html>
   );
