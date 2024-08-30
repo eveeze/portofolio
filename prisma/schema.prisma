@@ -23,3 +23,10 @@ model TwoFactorToken {
   userId    Int      @unique
   user      User     @relation(fields: [userId], references: [id])
 }
+
+model Knowledge {
+  id        Int      @id @default(autoincrement())
+  content   String   @db.Text // Using Text type for storing long text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
