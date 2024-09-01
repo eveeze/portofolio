@@ -4,21 +4,25 @@ import prisma from "@/lib/prisma";
 
 export async function PUT(req) {
   try {
-    const { id, content } = await req.json();
+    const { content } = await req.json();
 
-    if (!id || !content) {
+    // If content is empty, delete all knowledge entries
+    if (!content) {
+      await prisma.knowledge.deleteMany({});
       return new Response(
-        JSON.stringify({ message: "ID and content are required" }),
+        JSON.stringify({ message: "All knowledge entries deleted" }),
         {
-          status: 400,
+          status: 200,
           headers: { "Content-Type": "application/json" },
         }
       );
     }
 
-    const updatedKnowledge = await prisma.knowledge.update({
-      where: { id: parseInt(id) },
-      data: { content },
+    // Upsert knowledge entry, assuming there's only one entry
+    const updatedKnowledge = await prisma.knowledge.upsert({
+      where: { id: 1 }, // Assuming you are using a single entry with a fixed ID
+      update: { content },
+      create: { id: 1, content },
     });
 
     return new Response(JSON.stringify(updatedKnowledge), {
