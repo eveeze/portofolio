@@ -1,4 +1,4 @@
-// app/dashboard/page.jsx
+// app/dashboard/admin/project/page.jsx
 
 export default function Dashboard() {
   return (

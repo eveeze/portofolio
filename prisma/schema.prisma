@@ -30,3 +30,16 @@ model Knowledge {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 }
+
+// schema.prisma
+model Project {
+  id          Int      @id @default(autoincrement())
+  title       String
+  description String
+  link        String
+  techStack   String[] @default([]) // Array of strings for tech stack
+  icon        String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
